@@ -140,19 +140,19 @@ abstract class AbstractRequest extends CommonAbstractRequest
         }
         $signature['CANCELURL'] = $this->getCancelUrl() . $this->getShaIn();
         $signature['CATALOGURL'] = $this->getReturnUrl() . $this->getShaIn();
-        $signature['CN'] = $this->getCard()->getFirstName() . ' ' . $this->getCard()->getLastName() . $this->getShaIn();
+        //$signature['CN'] = $this->getCard()->getFirstName() . ' ' . $this->getCard()->getLastName() . $this->getShaIn();
         $signature['COM'] = $this->getDescription() . $this->getShaIn();
         $signature['CURRENCY'] = $this->getCurrency() . $this->getShaIn();
         $signature['DECLINEURL'] = $this->getCancelUrl() . $this->getShaIn();
-        $signature['EMAIL'] = $this->getCard()->getEmail() . $this->getShaIn();
+        //$signature['EMAIL'] = $this->getCard()->getEmail() . $this->getShaIn();
         $signature['EXCEPTIONURL'] = $this->getCancelUrl() . $this->getShaIn();
         $signature['HOMEURL'] = $this->getReturnUrl() . $this->getShaIn();
         $signature['LANGUAGE'] = $this->getLanguage() . $this->getShaIn();
         $signature['ORDERID'] = $this->getTransactionId() . $this->getShaIn();
-        $signature['OWNERADDRESS'] = $this->getCard()->getBillingAddress1() . $this->getShaIn();
-        $signature['OWNERTELNO'] = $this->getCard()->getBillingPhone() . $this->getShaIn();
-        $signature['OWNERTOWN'] = $this->getCard()->getBillingCity() . $this->getShaIn();
-        $signature['OWNERZIP'] = $this->getCard()->getBillingPostcode() . $this->getShaIn();
+        //$signature['OWNERADDRESS'] = $this->getCard()->getBillingAddress1() . $this->getShaIn();
+        //$signature['OWNERTELNO'] = $this->getCard()->getBillingPhone() . $this->getShaIn();
+        //$signature['OWNERTOWN'] = $this->getCard()->getBillingCity() . $this->getShaIn();
+        //$signature['OWNERZIP'] = $this->getCard()->getBillingPostcode() . $this->getShaIn();
         $signature['PM'] = $this->getPaymentMethod() . $this->getShaIn();
         $signature['PSPID'] = $this->getPSPID() . $this->getShaIn();
 
@@ -177,19 +177,19 @@ abstract class AbstractRequest extends CommonAbstractRequest
         }
         $data['CANCELURL'] = $this->getCancelUrl();
         $data['CATALOGURL'] = $this->getReturnUrl();
-        $data['CN'] = $this->getCard()->getFirstName() . ' ' . $this->getCard()->getLastName();
+        //$data['CN'] = $this->getCard()->getFirstName() . ' ' . $this->getCard()->getLastName();
         $data['COM'] = $this->getDescription();
         $data['CURRENCY'] = $this->getCurrency();
         $data['DECLINEURL'] = $this->getCancelUrl();
-        $data['EMAIL'] = $this->getCard()->getEmail();
+        //$data['EMAIL'] = $this->getCard()->getEmail();
         $data['EXCEPTIONURL'] = $this->getCancelUrl();
         $data['HOMEURL'] = $this->getReturnUrl();
         $data['LANGUAGE'] = $this->getLanguage();
         $data['ORDERID'] = $this->getTransactionId();
-        $data['OWNERADDRESS'] = $this->getCard()->getBillingAddress1();
-        $data['OWNERTELNO'] = $this->getCard()->getBillingPhone();
-        $data['OWNERTOWN'] = $this->getCard()->getBillingCity();
-        $data['OWNERZIP'] = $this->getCard()->getBillingPostcode();
+        //$data['OWNERADDRESS'] = $this->getCard()->getBillingAddress1();
+        //$data['OWNERTELNO'] = $this->getCard()->getBillingPhone();
+        //$data['OWNERTOWN'] = $this->getCard()->getBillingCity();
+        //$data['OWNERZIP'] = $this->getCard()->getBillingPostcode();
         $data['PM'] = $this->getPaymentMethod();
         $data['PSPID'] = $this->getPSPID();
         if($this->getHashing() == "SHA-1"){
